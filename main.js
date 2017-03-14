@@ -327,7 +327,7 @@ console.log(getOdds([8,4,6,7,8,97,6,5,43]));
 // write your code here:
 function containsIs(testIs)
 {
-  var newArray;
+  var newArray = [];
   for(var i = 0; i < testIs.length; i++)
   {
     if(testIs[i].includes('is'))
@@ -339,7 +339,7 @@ function containsIs(testIs)
 }
 
 // write your console.log/asserts here:
-console.log(containsIs(['testing', 'tests', 'testing is cool', 'did you see', 'hi is that pie']));
+console.log(containsIs(['testing', 'this test string', 'tests', 'testing is cool', 'did you see', 'hi is that pi']));
 
 ///////////////////////////////////////////////////////////////////////////////
 //                                                      Adventurer Mode                                                              //
