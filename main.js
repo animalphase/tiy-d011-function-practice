@@ -215,12 +215,28 @@ function translation(originalSentence) {
   return newSentence;
 }
 
-
-
-
 // write your console.log/asserts here:
 console.log(translation('test this'));
 console.assert(translation('test this') === 'toteoesostot tothohisos', ' error in translation' );
+
+
+
+console.log("\n:::::::: translation w/ reduce() :::::::::::::::");
+
+var wordToTest = 'unicorn';
+// split word to array of characters
+// then run reduce to loop through and return a new thing
+var answer2 = wordToTest.split('').reduce(function(building, letter, i, arr) {
+    if(isConsonant(letter)){
+      return building + letter + 'o' + letter;
+    } else {
+      return building + letter;
+    }
+}, '');
+console.log(answer2 + '\n\n\n');
+
+
+
 
 
 // ---------------------
@@ -350,8 +366,15 @@ console.log(containsIs(['testing', 'this test string', 'tests', 'testing is cool
 // strings and returns a new array with only the strings which contain the
 // substring specified string
 // write your code here:
+function contains(single, strings) {
+  var filteredStrings = strings.filter(function(thisString, i, array){
+    return ( thisString.includes(single) );
+  });
+  return filteredStrings;
+}
 
 // write your console.log/asserts here:
+console.log(contains('is', ['this', 'is', 'a', 'test', 'so', 'wish']));
 
 
 // ---------------------
